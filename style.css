@@ -1,0 +1,451 @@
+*{
+	box-sizing: border-box;
+}
+
+
+body{
+	font-family: 'Bree Serif', serif;
+	font-size: 10px;
+	color: black;
+}
+
+
+header {
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Hace que el header ocupe todo el ancho de la pantalla */
+    background-color: #000; /* Fondo negro */
+    border-bottom: 1px solid #ccc; /* Agrega un borde inferior para separación */
+    z-index: 1000; /* Asegúrate de que el header esté por encima de otros elementos */
+    height: 57px; /* Altura inicial del header (50px + 7px) */
+    display: flex; /* Cambiado a flex para alinear elementos */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    align-items: center; /* Centra verticalmente los elementos dentro del header */
+    transition: height 0.3s; /* Transición suave para cambios de altura */
+}
+
+.container {
+    display: flex; /* Utiliza flexbox para alinear los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Espacia los elementos entre sí */
+    width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho */
+}
+
+.barra {
+    display: flex; /* Utiliza flexbox para alinear los enlaces */
+    justify-content: center; /* Centra los enlaces horizontalmente */
+    flex-grow: 1; /* Permite que el menú ocupe el espacio disponible */
+}
+.logo-icon {
+    height: 80px; /* Ajusta la altura según sea necesario */
+    margin-right: 20px; /* Espaciado entre el icono y la barra de navegación */
+    align-self: center; /* Centra verticalmente el ícono en el contenedor */
+}
+
+
+.barra a {
+    margin: 0 25px; /* Espaciado entre los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #fff; /* Color blanco para los enlaces */
+    font-weight: 400; /* Cambiado a un peso de fuente más delgado */
+    font-size: 18px; /* Tamaño de fuente más grande para los enlaces */
+}
+
+
+.barra a:hover {
+    text-decoration: underline; /* Agrega subrayado al pasar el ratón */
+}
+
+.hamb {
+    display: none; /* Oculta el ícono del menú hamburguesa por defecto */
+    color: #fff; /* Color blanco para el ícono hamburguesa */
+}
+
+
+#inicio{
+	position: relative;
+}
+#inicio img{
+	width: 100%;
+	display: block;
+}
+#inicio .bloque-inicio{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	text-align: center;
+	margin-left: -200px;
+}
+
+#inicio .bloque-inicio p{
+	color: white;
+	font-size: 25px;
+
+}
+.boton{
+	text-align: center;
+	text-decoration: none;
+	padding: 15px 20px;
+	border: none;
+}
+.boton.boton-rojo{
+	color: black;
+	background-color: white;
+	font-size: 20px;
+	font-weight: bold;
+}
+.seccion{
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+#nosotros{
+	background-image: url(img/boro.jpg);
+	background-size: cover;
+	
+}
+#nosotros p {
+	color: white;
+	text-align: center;
+	font-size: 16px;
+}
+.row{
+	margin-left: -15px;
+	margin-right: -15px; 
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.columna{
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.columna-33{
+	width: 33.33%;
+}
+#servicios .bloque-servicio{
+	border: 1px solid grey; 
+}
+#servicios .bloque-servicio .bloque-img-servicio img{
+	width: 100%;
+}
+#servicios .bloque-servicio .bloque-contenido-servicio{
+	padding: 15px;
+}
+#servicios .bloque-servicio .bloque-contenido-servicio h3{
+	margin-top: 0;
+	font-size: 25px;
+}
+.boton.boton-banco{
+    color: black;
+	background-color: white;
+	font-size: 15px;
+	font-weight: bold;
+	
+}
+
+
+.container-fluid{
+	width: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#contactanos{
+	position: relative;
+}
+#contactanos iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	filter: grayscale(1);
+}
+.columna-50{
+	width: 50%;
+
+}
+.empujar-50{
+	margin-left: 50%;
+}
+.empujar-0{
+	margin-left: 0;
+}
+#contactanos form{
+	padding: 60px;
+	background-color: black;
+}
+#contactanos form .form-block{
+	width: 100%;
+	margin-bottom: 15px;
+}
+#contactanos form .form-block .form-control{
+	display: block;
+	height: 40px;
+	font-size: 16px;
+	border: 1px solid grey;
+	width: 100%;
+	padding: 5px 10px;
+}
+#contactanos form .form-block textarea{
+	display: block;
+	height: 100px;
+	font-size: 16px;
+	border: 1px solid grey;
+	width: 100%;
+	padding: 5px 10px;
+}
+#contactanos form .form-block.bloque-ultimo{
+	margin-bottom: 0;
+}
+.boton.boton-negro{
+    color: rgb(255, 255, 255);
+	background-color: black;
+	font-size: 15px;
+	font-weight: bold;
+	border: 1px solid rgb(255, 255, 255);
+}
+footer {
+	background-color: black;
+	color: white;
+}
+footer .barra-footer{
+	background-color: grey;
+	text-align: center;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.columna-25{
+	width: 33%;
+}
+footer ul{
+	padding-right: 0;
+	list-style: none;
+	margin-bottom: 0;
+}
+footer .logo-footer{
+	width: 100%
+}
+footer p{
+	color: white;
+	margin-bottom: 30px;
+}
+footer a{
+	color: white;
+	
+}
+footer ul li{
+	margin-bottom: 10px;
+	text-align:justify; 
+	margin-left: -35px;
+
+}
+
+.white{
+	font-family: 'Bowlby One SC', cursive;
+	font-size: 50px;
+	margin-top: -45px;
+	
+}
+.redes {
+	font-size: 30px;	
+}
+.redes p{
+	font-size: 15px;
+	
+	
+}
+
+.centro{
+	margin-top: -10px;
+	display: flex;
+	flex-direction: column;
+	font-family: 'Amatic SC', cursive;
+	font-size: 30px;
+}
+
+.centrod{
+	font-size: 35px;
+	
+}
+.centrode{
+	margin-top: -40px;
+	font-size: 25px;
+}
+
+#galeria .columna-33 {
+    padding: 10px;
+}
+
+#galeria .cuadrado-perfecto {
+    position: relative;
+    overflow: hidden;
+}
+
+#galeria .cuadrado-perfecto img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Mantén el filtro y la transición */
+    filter: grayscale(1);
+    transition: filter 0.5s ease;
+}
+
+#galeria .cuadrado-perfecto:hover img {
+    filter: grayscale(0);
+}
+
+
+
+@media(max-width: 767px){
+	body{
+		font-size: 15px;
+	}
+	header .container nav{
+		position: fixed;
+		background-image: url(img/prueba.jpg.crdownload);
+		/* Aquí el origen de la imagen */
+		/* Fijar la imagen de fondo este vertical y
+		  horizontalmente y centrado */
+		background-position: center center;
+	  
+		/* Esta imagen no debe de repetirse */
+		background-repeat: no-repeat;
+	  
+		/* COn esta regla fijamos la imagen en la pantalla. */
+		background-attachment: fixed;
+	  
+		/* La imagen ocupa el 100% y se reescala */
+		background-size: cover;
+	  
+		/* Damos un color de fondo mientras la imagen está cargando  */
+		background-color: #464646;
+		height: 100%;
+		width: 100%;
+		padding-top: 80px;
+		padding-bottom: 80px;
+		padding-left: 15px;
+		padding-right: 15px;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		transition: all 0.2s ease;
+		transform: translateX(100%); 
+	}
+	
+	header .container nav.open{
+		transform: translateX(0); 
+	}
+	header .container nav a{
+		font-size: 30px;
+		margin: 15px 0;
+	}
+	header .container .hamb{
+		display: block;
+		font-size: 40px;
+		color: rgb(145, 145, 145);
+	}
+	form .boton.boton-negro{
+		width: 100%;
+	}
+	
+	footer .logo-footer{
+		width: 60%;
+	}
+	footer {
+		text-align: center;
+	}
+
+	.centro{
+		display: flex;
+		flex-direction: column;
+		justify-content:  center;
+		align-items: center;
+		margin-top: -15px;
+		font-family: 'Amatic SC', cursive;
+		font-size: 25px;
+	}
+	
+	.centrod{
+		margin-top: -15px;
+		margin-bottom: 30px;
+		font-size: 25px;
+	}
+
+	.container{
+		width: 100%;
+
+	}
+	.columna-mobile-100{
+		width: 100%;
+		font-size: 25px;
+	}
+	.columna-mobile-50{
+		width: 50%;
+	}
+	#inicio{
+		height: 100vh;
+	}
+	#inicio img {
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+	
+	#contactanos iframe{
+		position: relative;
+		height: 50vh;
+	}
+	#contactenos{
+		padding: 0;
+	}
+	.empujar-mobile-0{
+	margin-left: 0;
+
+	}
+	.sinpadding-mobile{
+	padding: 0;
+	}
+	footer .redes{
+		font-size: 30px;
+		display: flex;
+		justify-content: center;	
+    }
+    footer .redes a{
+	    margin: 0 35px;	
+	}
+	
+	.bloque-inicio  h1, .bloque-inicio  p{
+		color: rgb(255, 255, 255);
+	}
+	.white{
+		font-family: 'Bowlby One SC', cursive;
+		font-size: 40px;
+		margin-top: -30px;
+	}
+	.centrode{
+		margin-top: -45px;
+		margin-bottom: 15px;
+	}
+	.bloque-servicio{
+		margin-top: 10px;
+	}
+	header .container nav a{
+		color: rgb(255, 255, 255);
+		text-decoration: none;
+		margin: 0 20px;
+		font-size: 25px;
+		font-family: 'Bowlby One SC', cursive;
+		margin-top: 10px;
+	}
+	
+	
+}
+
+
+
