@@ -2,13 +2,11 @@
 	box-sizing: border-box;
 }
 
-
-body{
-	font-family: 'Bree Serif', serif;
-	font-size: 10px;
-	color: black;
+/* Remover el margen negativo de la sección */
+section {
+    padding-top: 70px; /* Cambia este valor según la altura de tu encabezado */
+    
 }
-
 
 header {
     position: fixed; /* Fija el header en la parte superior */
@@ -62,54 +60,93 @@ header {
     color: #fff; /* Color blanco para el ícono hamburguesa */
 }
 
-
-#inicio{
-	position: relative;
-}
-#inicio img{
-	width: 100%;
-	display: block;
-}
-#inicio .bloque-inicio{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 400px;
-	text-align: center;
-	margin-left: -200px;
+/* Estilo para la sección de inicio */
+#inicio {
+    position: relative; /* Permite que los elementos hijos se posicionen en relación con este contenedor */
+    overflow: hidden; /* Asegura que cualquier contenido que se desborde se oculte */
+    display: flex; /* Utiliza flexbox para alinear elementos */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
 }
 
-#inicio .bloque-inicio p{
-	color: white;
-	font-size: 25px;
+/* Estilo para la imagen */
+.inicio-img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 400px; /* Establece una altura máxima para la imagen, ajusta según sea necesario */
+    object-fit: cover; /* Cubre el área de la imagen sin distorsionar su aspecto */
+}
 
+/* Estilo para el bloque de contenido */
+.bloque-inicio {
+    position: absolute; /* Posiciona el bloque sobre la imagen */
+    top: 50%; /* Coloca el bloque en el medio de la sección */
+    left: 50%; /* Centra el bloque horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta el bloque para que esté completamente centrado */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    text-align: center; /* Centra el texto dentro del bloque */
 }
-.boton{
-	text-align: center;
-	text-decoration: none;
-	padding: 15px 20px;
-	border: none;
+.seccionN {
+	height: 160px; /* Establece la altura de la sección a 500px */ 
+    background-color: black; /* Fondo negro */
+    width: 100%; /* Asegura que la sección ocupe todo el ancho */
 }
-.boton.boton-rojo{
-	color: black;
-	background-color: white;
-	font-size: 20px;
-	font-weight: bold;
+
+.titulo {
+	color: gold; /* Color dorado para el título */
+    text-align: center; /* Centra el título */
+    font-size: 24px; /* Tamaño de fuente del título */
+    margin-bottom: 20px; /* Espaciado debajo del título */
 }
-.seccion{
-	padding-top: 60px;
-	padding-bottom: 60px;
-}
-#nosotros{
-	background-image: url(img/boro.jpg);
-	background-size: cover;
-	
-}
+
 #nosotros p {
-	color: white;
-	text-align: center;
-	font-size: 16px;
+    color: white; /* Color blanco para el texto */
+    text-align: center; /* Centra el texto */
+    font-size: 18px; /* Tamaño de fuente del párrafo aumentado */
+    margin: 0 20px; /* Margen moderado a los lados */
 }
+.containerdos {
+    margin-top: -60px; /* Reduce el margen superior para mover el contenido hacia arriba */
+    text-align: center; /* Centra el contenido del contenedor */
+}
+
+
+.serv {
+    text-align: center; /* Centra el texto dentro del div */
+    padding: 30px 0; /* Añade espaciado vertical para darle más presencia */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+}
+
+.serv h1 {
+
+    font-size: 36px; /* Tamaño de fuente grande */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras para mayor impacto */
+    margin: 0; /* Elimina el margen por defecto */
+    font-weight: bold; /* Hace el texto más grueso */
+}
+
+.seccionser{
+	margin-top: -70px;
+}
+
+
+
+#nosotros {
+    background-color: black; /* Cambia a fondo negro */
+    position: relative; /* Para permitir que los hijos se posicionen */
+    
+}
+
+/* Contenedor para el texto */
+
+
+
+
 .row{
 	margin-left: -15px;
 	margin-right: -15px; 
@@ -125,7 +162,7 @@ header {
 	width: 33.33%;
 }
 #servicios .bloque-servicio{
-	border: 1px solid grey; 
+	border: 1px solid rgb(0, 0, 0); 
 }
 #servicios .bloque-servicio .bloque-img-servicio img{
 	width: 100%;
@@ -206,75 +243,105 @@ header {
 	font-size: 15px;
 	font-weight: bold;
 	border: 1px solid rgb(255, 255, 255);
-}
-footer {
-	background-color: black;
-	color: white;
-}
-footer .barra-footer{
-	background-color: grey;
-	text-align: center;
-	padding-right: 15px;
-	padding-left: 15px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-.columna-25{
-	width: 33%;
-}
-footer ul{
-	padding-right: 0;
-	list-style: none;
-	margin-bottom: 0;
-}
-footer .logo-footer{
-	width: 100%
-}
-footer p{
-	color: white;
-	margin-bottom: 30px;
-}
-footer a{
-	color: white;
-	
-}
-footer ul li{
-	margin-bottom: 10px;
-	text-align:justify; 
-	margin-left: -35px;
-
+}footer {
+    background-color: black;
+    color: white;
+    padding: 40px 0; /* Añade espacio arriba y abajo del footer */
 }
 
-.white{
-	font-family: 'Bowlby One SC', cursive;
-	font-size: 50px;
-	margin-top: -45px;
-	
+footer .barra-footer {
+    background-color: grey;
+    text-align: center;
+    padding: 10px 15px; /* Ajusta el padding para no ser tan grande */
+    font-size: 14px; /* Tamaño de fuente más pequeño para el copyright */
 }
+
+footer .containerf {
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    padding: 0 15px; /* Espaciado lateral */
+}
+
+.columna-25 {
+    width: 33%;
+    padding: 15px; /* Añade un poco de espacio interno */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+footer ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+footer .logo-footer {
+    width: 100%;
+}
+
+footer p {
+    color: white;
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none; /* Elimina subrayado en los enlaces */
+}
+
+footer ul li {
+    margin-bottom: 10px;
+    text-align: left; /* Ajusta la alineación del texto a la izquierda */
+    margin-left: 0; /* Elimina el margen negativo para mejor alineación */
+}
+
+.white {
+    font-family: 'Bowlby One SC', cursive;
+    font-size: 36px; /* Reduce el tamaño de fuente para mejor legibilidad */
+    margin-top: -20px;
+    text-align: center; /* Centra el texto */
+}
+
 .redes {
-	font-size: 30px;	
-}
-.redes p{
-	font-size: 15px;
-	
-	
+    font-size: 24px; /* Ajusta el tamaño de los íconos de redes sociales */
+    display: flex;
+    justify-content: center; /* Centra los íconos horizontalmente */
+    gap: 15px; /* Añade separación entre los íconos */
 }
 
-.centro{
-	margin-top: -10px;
-	display: flex;
-	flex-direction: column;
-	font-family: 'Amatic SC', cursive;
-	font-size: 30px;
+.redes i {
+    font-size: 30px; /* Tamaño de íconos de redes sociales */
 }
 
-.centrod{
-	font-size: 35px;
-	
+.centro {
+    margin-top: 10px; /* Ajusta el margen superior */
+    display: flex;
+    flex-direction: column;
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px; /* Ajusta el tamaño de fuente */
+    text-align: center; /* Centra el texto de contacto */
 }
-.centrode{
-	margin-top: -40px;
-	font-size: 25px;
+
+.centrod {
+    font-size: 25px; /* Reduce el tamaño de los títulos */
+    text-align: center; /* Centra los títulos */
+}
+
+.centrode {
+    margin-top: -10px; /* Ajusta el margen superior */
+    font-size: 20px; /* Ajusta el tamaño del texto */
+    text-align: center; /* Centra el texto */
+}
+
+/* Responsive footer para pantallas pequeñas */
+@media (max-width: 768px) {
+    .columna-25 {
+        width: 100%; /* Cada columna ocupará el 100% del ancho */
+        margin-bottom: 20px; /* Añade espacio entre columnas */
+    }
+
+    .redes {
+        font-size: 20px; /* Reduce el tamaño de los íconos en móviles */
+    }
 }
 
 #galeria .columna-33 {
