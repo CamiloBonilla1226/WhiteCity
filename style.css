@@ -72,45 +72,49 @@ header {
 /* Estilo para la imagen */
 .inicio-img {
     width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    max-height: 400px; /* Establece una altura máxima para la imagen, ajusta según sea necesario */
+   
     object-fit: cover; /* Cubre el área de la imagen sin distorsionar su aspecto */
 }
 
-/* Estilo para el bloque de contenido */
-.bloque-inicio {
-    position: absolute; /* Posiciona el bloque sobre la imagen */
-    top: 50%; /* Coloca el bloque en el medio de la sección */
-    left: 50%; /* Centra el bloque horizontalmente */
-    transform: translate(-50%, -50%); /* Ajusta el bloque para que esté completamente centrado */
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
-    text-align: center; /* Centra el texto dentro del bloque */
-}
-.seccionN {
-	height: 160px; /* Establece la altura de la sección a 500px */ 
+.contain {
     background-color: black; /* Fondo negro */
-    width: 100%; /* Asegura que la sección ocupe todo el ancho */
+    color: white; /* Color de la letra blanco */
+    height: 200px;
+	
 }
 
-.titulo {
-	color: gold; /* Color dorado para el título */
-    text-align: center; /* Centra el título */
-    font-size: 24px; /* Tamaño de fuente del título */
-    margin-bottom: 20px; /* Espaciado debajo del título */
+.seccionNo {
+    color: white; /* Color de la letra blanco */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+   /* Centra verticalmente */
+    height: 200px; /* Altura fija de 200px para la sección */
 }
 
-#nosotros p {
-    color: white; /* Color blanco para el texto */
+.contain {
+    background-color: black; /* Fondo negro para el contenedor */
+    color: white; /* Color del texto dentro del contenedor */
+    display: flex; /* Usamos flexbox */
+    flex-direction: column; /* Apila el h1 y p verticalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    height: 200px; /* Altura del contenedor */
+    padding: 0 40px; /* Añade un margen a ambos lados para que el texto no esté pegado al borde */
+}
+
+.titulos {
+    color: gold; /* Color dorado para el título */
+    text-align: center; /* Centra el texto del título */
+    font-size: 28px; /* Ajusta el tamaño del título */
+    margin-bottom: 20px; /* Espacio entre el título y el párrafo */
+	margin-top: -20px;
+}
+
+.contain p {
+    color: white; /* Texto blanco */
     text-align: center; /* Centra el texto */
-    font-size: 18px; /* Tamaño de fuente del párrafo aumentado */
-    margin: 0 20px; /* Margen moderado a los lados */
-}
-.containerdos {
-    margin-top: -60px; /* Reduce el margen superior para mover el contenido hacia arriba */
-    text-align: center; /* Centra el contenido del contenedor */
+    font-size: 18px; /* Ajusta el tamaño del texto */
+    margin: 0 20px; /* Margen considerable a ambos lados del párrafo */
 }
 
 
@@ -134,15 +138,6 @@ header {
 	margin-top: -70px;
 }
 
-
-
-#nosotros {
-    background-color: black; /* Cambia a fondo negro */
-    position: relative; /* Para permitir que los hijos se posicionen */
-    
-}
-
-/* Contenedor para el texto */
 
 
 
@@ -257,9 +252,13 @@ footer .barra-footer {
 }
 
 footer .containerf {
+	
     max-width: 1200px;
     margin: 0 auto; /* Centra el contenido horizontalmente */
     padding: 0 15px; /* Espaciado lateral */
+}
+.row{
+	padding-bottom: 60px;
 }
 
 .columna-25 {
@@ -314,12 +313,21 @@ footer ul li {
 
 .centro {
     margin-top: 10px; /* Ajusta el margen superior */
-    display: flex;
-    flex-direction: column;
     font-family: 'Amatic SC', cursive;
     font-size: 20px; /* Ajusta el tamaño de fuente */
     text-align: center; /* Centra el texto de contacto */
+    list-style: none; /* Elimina las viñetas */
+    padding-left: 0; /* Elimina el padding por defecto */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinea los elementos hijos al centro */
 }
+
+.centro li {
+    margin-bottom: 10px; /* Espaciado entre los elementos de la lista */
+    text-align: center; /* Centra el texto dentro de cada elemento de la lista */
+}
+
 
 .centrod {
     font-size: 25px; /* Reduce el tamaño de los títulos */
@@ -332,17 +340,6 @@ footer ul li {
     text-align: center; /* Centra el texto */
 }
 
-/* Responsive footer para pantallas pequeñas */
-@media (max-width: 768px) {
-    .columna-25 {
-        width: 100%; /* Cada columna ocupará el 100% del ancho */
-        margin-bottom: 20px; /* Añade espacio entre columnas */
-    }
-
-    .redes {
-        font-size: 20px; /* Reduce el tamaño de los íconos en móviles */
-    }
-}
 
 #galeria .columna-33 {
     padding: 10px;
@@ -364,6 +361,21 @@ footer ul li {
 
 #galeria .cuadrado-perfecto:hover img {
     filter: grayscale(0);
+}
+
+
+.secciconcontact {
+    width: 100%; /* La sección ocupará todo el ancho disponible */
+    height: 400px; /* La sección ocupará todo el alto de la ventana */
+    display: flex;
+    justify-content: center; /* Centra el mapa horizontalmente */
+    align-items: center; /* Centra el mapa verticalmente */
+}
+
+#gmap_canvas {
+    width: 100%; /* El mapa ocupará el 100% del ancho de la sección */
+    height: 100px; /* El mapa ocupará el 100% del alto de la sección */
+    border: 0; /* Elimina el borde del iframe */
 }
 
 
